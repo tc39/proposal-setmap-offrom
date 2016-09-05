@@ -4,8 +4,21 @@
   "description": "TC39 Proposal for Set and Map .of and .from methods",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf out",
+    "build": "npm run clean && mkdir -p out && ecmarkup src/spec.html --js=out/spec.js --css=out/spec.css | js-beautify -f - --type=html -t > out/index.html"
   },
   "author": "Leo Balter",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leobalter/proposal-setmap-offrom.git"
+  },
+  "keywords": [
+    "ecmascript",
+    "tc39",
+    "test262"
+  ],
+  "devDependencies": {
+    "ecmarkup": "^3.5.1"
+  }
 }
