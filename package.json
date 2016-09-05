@@ -19,6 +19,7 @@
     "test262"
   ],
   "devDependencies": {
-    "ecmarkup": "^3.5.1"
+    "ecmarkup": "^3.5.1",
+    "js-beautify": "^1.6.4"
   }
 }
