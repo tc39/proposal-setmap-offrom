@@ -7,8 +7,8 @@
 
 ## Champions
 
-Allen Wirfs-Brock
-Leo Balter
+- Allen Wirfs-Brock
+- Leo Balter
 
 
 ## Status
