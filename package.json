@@ -8,7 +8,7 @@
     "build": "npm run clean && mkdir -p out && ecmarkup src/spec.html --js=out/spec.js --css=out/spec.css | js-beautify -f - --type=html -t > out/index.html"
   },
   "author": "Leo Balter",
-  "license": "MIT",
+  "license": "BSD",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/leobalter/proposal-setmap-offrom.git"
