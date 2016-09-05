@@ -1,0 +1,310 @@
+<!doctype html>
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="./spec.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+	<script src="./spec.js"></script>
+	<title>Set and Map .of and .from</title>
+	<script type="application/json" id="menu-search-biblio">
+		[{
+			"type": "op",
+			"aoid": "CollectionCreate",
+			"refId": "sec-collectioncreate",
+			"location": "",
+			"key": "CollectionCreate"
+		}, {
+			"type": "clause",
+			"id": "sec-collectioncreate",
+			"aoid": "CollectionCreate",
+			"title": "CollectionCreate ( C, iterable )",
+			"titleHTML": "CollectionCreate ( <var>C</var>, <var>iterable</var> )",
+			"number": "1",
+			"namespace": "https://github.com/leobalter/proposal-setmap-offrom",
+			"location": "",
+			"key": "CollectionCreate ( C, iterable )"
+		}, {
+			"type": "clause",
+			"id": "sec-map.of",
+			"aoid": null,
+			"title": "Map.of ( ...items )",
+			"titleHTML": "Map.of ( ...<var>items</var> )",
+			"number": "2",
+			"namespace": "https://github.com/leobalter/proposal-setmap-offrom",
+			"location": "",
+			"key": "Map.of ( ...items )"
+		}, {
+			"type": "clause",
+			"id": "sec-set.of",
+			"aoid": null,
+			"title": "Set.of ( ...items )",
+			"titleHTML": "Set.of ( ...<var>items</var> )",
+			"number": "3",
+			"namespace": "https://github.com/leobalter/proposal-setmap-offrom",
+			"location": "",
+			"key": "Set.of ( ...items )"
+		}, {
+			"type": "clause",
+			"id": "sec-weakmap.of",
+			"aoid": null,
+			"title": "WeakMap.of ( ...items )",
+			"titleHTML": "WeakMap.of ( ...<var>items</var> )",
+			"number": "4",
+			"namespace": "https://github.com/leobalter/proposal-setmap-offrom",
+			"location": "",
+			"key": "WeakMap.of ( ...items )"
+		}, {
+			"type": "clause",
+			"id": "sec-weakset.of",
+			"aoid": null,
+			"title": "WeakSet.of ( ...items )",
+			"titleHTML": "WeakSet.of ( ...<var>items</var> )",
+			"number": "5",
+			"namespace": "https://github.com/leobalter/proposal-setmap-offrom",
+			"location": "",
+			"key": "WeakSet.of ( ...items )"
+		}, {
+			"type": "op",
+			"aoid": "GetCollectionAddMethod",
+			"refId": "sec-getcollectionaddmethod",
+			"location": "",
+			"key": "GetCollectionAddMethod"
+		}, {
+			"type": "clause",
+			"id": "sec-getcollectionaddmethod",
+			"aoid": "GetCollectionAddMethod",
+			"title": "Runtime Semantics: GetCollectionAddMethod( target )",
+			"titleHTML": "Runtime Semantics: GetCollectionAddMethod( <var>target</var> )",
+			"number": "6.1",
+			"namespace": "https://github.com/leobalter/proposal-setmap-offrom",
+			"location": "",
+			"key": "Runtime Semantics: GetCollectionAddMethod( target )"
+		}, {
+			"type": "clause",
+			"id": "sec-collectioncreatefrom aoid=",
+			"aoid": null,
+			"title": "CollectionCreateFrom ( C, source [ , mapfn [ , thisArg ] ] )",
+			"titleHTML": "CollectionCreateFrom ( <var>C</var>, <var>source</var> [ , <var>mapfn</var> [ , <var>thisArg</var> ] ] )",
+			"number": "6",
+			"namespace": "https://github.com/leobalter/proposal-setmap-offrom",
+			"location": "",
+			"key": "CollectionCreateFrom ( C, source [ , mapfn [ , thisArg ] ] )"
+		}, {
+			"type": "clause",
+			"id": "sec-map.from",
+			"aoid": null,
+			"title": "Map.from ( source [ , mapFn [ , thisArg ] ] )",
+			"titleHTML": "Map.from ( <var>source</var> [ , <var>mapFn</var> [ , <var>thisArg</var> ] ] )",
+			"number": "7",
+			"namespace": "https://github.com/leobalter/proposal-setmap-offrom",
+			"location": "",
+			"key": "Map.from ( source [ , mapFn [ , thisArg ] ] )"
+		}, {
+			"type": "clause",
+			"id": "sec-set.from",
+			"aoid": null,
+			"title": "Set.from ( source [ , mapFn [ , thisArg ] ] )",
+			"titleHTML": "Set.from ( <var>source</var> [ , <var>mapFn</var> [ , <var>thisArg</var> ] ] )",
+			"number": "8",
+			"namespace": "https://github.com/leobalter/proposal-setmap-offrom",
+			"location": "",
+			"key": "Set.from ( source [ , mapFn [ , thisArg ] ] )"
+		}, {
+			"type": "clause",
+			"id": "sec-weakmap.from",
+			"aoid": null,
+			"title": "WeakMap.from ( source [ , mapFn [ , thisArg ] ] )",
+			"titleHTML": "WeakMap.from ( <var>source</var> [ , <var>mapFn</var> [ , <var>thisArg</var> ] ] )",
+			"number": "9",
+			"namespace": "https://github.com/leobalter/proposal-setmap-offrom",
+			"location": "",
+			"key": "WeakMap.from ( source [ , mapFn [ , thisArg ] ] )"
+		}, {
+			"type": "clause",
+			"id": "sec-weakset.from",
+			"aoid": null,
+			"title": "WeakSet.from ( source [ , mapFn [ , thisArg ] ] )",
+			"titleHTML": "WeakSet.from ( <var>source</var> [ , <var>mapFn</var> [ , <var>thisArg</var> ] ] )",
+			"number": "10",
+			"namespace": "https://github.com/leobalter/proposal-setmap-offrom",
+			"location": "",
+			"key": "WeakSet.from ( source [ , mapFn [ , thisArg ] ] )"
+		}]
+	</script>
+</head>
+
+<body>
+	<div id="menu-toggle">☰</div>
+	<div id="menu">
+		<div id="menu-search"><input type="text" id="menu-search-box" placeholder="Search...">
+			<div id="menu-search-results" class="inactive"></div>
+		</div>
+		<div id="menu-toc">
+			<ol class="toc">
+				<li><span class="item-toggle-none"></span><a href="#sec-collectioncreate" title="CollectionCreate ( C, iterable )"><span class="secnum">1</span> CollectionCreate ( <var>C</var>, <var>iterable</var> )</a></li>
+				<li><span class="item-toggle-none"></span><a href="#sec-map.of" title="Map.of ( ...items )"><span class="secnum">2</span> Map.of ( ...<var>items</var> )</a></li>
+				<li><span class="item-toggle-none"></span><a href="#sec-set.of" title="Set.of ( ...items )"><span class="secnum">3</span> Set.of ( ...<var>items</var> )</a></li>
+				<li><span class="item-toggle-none"></span><a href="#sec-weakmap.of" title="WeakMap.of ( ...items )"><span class="secnum">4</span> WeakMap.of ( ...<var>items</var> )</a></li>
+				<li><span class="item-toggle-none"></span><a href="#sec-weakset.of" title="WeakSet.of ( ...items )"><span class="secnum">5</span> WeakSet.of ( ...<var>items</var> )</a></li>
+				<li><span class="item-toggle">◢</span><a href="#sec-collectioncreatefrom aoid=" title="CollectionCreateFrom ( C, source [ , mapfn [ , thisArg ] ] )"><span class="secnum">6</span> CollectionCreateFrom ( <var>C</var>, <var>source</var> [ , <var>mapfn</var> [ , <var>thisArg</var> ] ] )</a>
+					<ol class="toc">
+						<li><span class="item-toggle-none"></span><a href="#sec-getcollectionaddmethod" title="Runtime Semantics: GetCollectionAddMethod( target )"><span class="secnum">6.1</span> RS: GetCollectionAddMethod( <var>target</var> )</a></li>
+					</ol>
+				</li>
+				<li><span class="item-toggle-none"></span><a href="#sec-map.from" title="Map.from ( source [ , mapFn [ , thisArg ] ] )"><span class="secnum">7</span> Map.from ( <var>source</var> [ , <var>mapFn</var> [ , <var>thisArg</var> ] ] )</a></li>
+				<li><span class="item-toggle-none"></span><a href="#sec-set.from" title="Set.from ( source [ , mapFn [ , thisArg ] ] )"><span class="secnum">8</span> Set.from ( <var>source</var> [ , <var>mapFn</var> [ , <var>thisArg</var> ] ] )</a></li>
+				<li><span class="item-toggle-none"></span><a href="#sec-weakmap.from" title="WeakMap.from ( source [ , mapFn [ , thisArg ] ] )"><span class="secnum">9</span> WeakMap.from ( <var>source</var> [ , <var>mapFn</var> [ , <var>thisArg</var> ] ] )</a></li>
+				<li><span class="item-toggle-none"></span><a href="#sec-weakset.from" title="WeakSet.from ( source [ , mapFn [ , thisArg ] ] )"><span class="secnum">10</span> WeakSet.from ( <var>source</var> [ , <var>mapFn</var> [ , <var>thisArg</var> ] ] )</a></li>
+			</ol>
+		</div>
+	</div>
+	<h1 class="version">Stage 0 Draft / September 5, 2016</h1>
+	<h1 class="title">Set and Map .of and .from</h1>
+
+	<emu-clause id="sec-collectioncreate" aoid="CollectionCreate">
+		<h1><span class="secnum">1</span>CollectionCreate ( <var>C</var>, <var>iterable</var> )<span class="utils"><span class="anchor"><a href="#sec-collectioncreate">#</a></span></span>
+		</h1>
+		<p>The abstract operation CollectionCreate with arguments <var>C</var> and <var>iterable</var> (any valid iterable object) is used to specify the creation of new collection objects. It performs the following steps:</p>
+		<emu-alg>
+			<ol>
+				<li>Assert: <var>iterable</var> is an iterable object.</li>
+				<li>If
+					<emu-xref aoid="IsConstructor"><a href="https://tc39.github.io/ecma262/#sec-isconstructor">IsConstructor</a></emu-xref>(<var>C</var>) is
+					<emu-val>false</emu-val>, throw a TypeError exception.</li>
+				<li>Let <var>collection</var> be ?
+					<emu-xref aoid="Construct"><a href="https://tc39.github.io/ecma262/#sec-construct">Construct</a></emu-xref>(<var>C</var>, « <var>items</var> »).</li>
+				<li>Return <var>collection</var>.
+				</li>
+			</ol>
+		</emu-alg>
+	</emu-clause>
+
+	<emu-clause id="sec-map.of">
+		<h1><span class="secnum">2</span>Map.of ( ...<var>items</var> )<span class="utils"><span class="anchor"><a href="#sec-map.of">#</a></span></span>
+		</h1>
+
+		<p>When the <code>of</code> method is called with any number of arguments, the following steps are taken:</p>
+
+		<emu-alg>
+			<ol>
+				<li>Let <var>items</var> be the
+					<emu-xref href="#sec-list-and-record-specification-type"><a href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">List</a></emu-xref> of arguments passed to this function.</li>
+				<li>Let <var>C</var> be the <var>this</var> value.</li>
+				<li>Return ?
+					<emu-xref aoid="CollectionCreate"><a href="#sec-collectioncreate">CollectionCreate</a></emu-xref>(<var>C</var>, <var>items</var>).
+				</li>
+			</ol>
+		</emu-alg>
+	</emu-clause>
+
+	<emu-clause id="sec-set.of">
+		<h1><span class="secnum">3</span>Set.of ( ...<var>items</var> )<span class="utils"><span class="anchor"><a href="#sec-set.of">#</a></span></span>
+		</h1>
+
+		<p>When the <code>of</code> method is called with any number of arguments, the following steps are taken:</p>
+
+		<emu-alg>
+			<ol>
+				<li>Let <var>items</var> be the
+					<emu-xref href="#sec-list-and-record-specification-type"><a href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">List</a></emu-xref> of arguments passed to this function.</li>
+				<li>Let <var>C</var> be the <var>this</var> value.</li>
+				<li>Return ?
+					<emu-xref aoid="CollectionCreate"><a href="#sec-collectioncreate">CollectionCreate</a></emu-xref>(<var>C</var>, <var>items</var>).
+				</li>
+			</ol>
+		</emu-alg>
+	</emu-clause>
+
+	<emu-clause id="sec-weakmap.of">
+		<h1><span class="secnum">4</span>WeakMap.of ( ...<var>items</var> )<span class="utils"><span class="anchor"><a href="#sec-weakmap.of">#</a></span></span>
+		</h1>
+
+		<p>When the <code>of</code> method is called with any number of arguments, the following steps are taken:</p>
+
+		<emu-alg>
+			<ol>
+				<li>Let <var>items</var> be the
+					<emu-xref href="#sec-list-and-record-specification-type"><a href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">List</a></emu-xref> of arguments passed to this function.</li>
+				<li>Let <var>C</var> be the <var>this</var> value.</li>
+				<li>Return ?
+					<emu-xref aoid="CollectionCreate"><a href="#sec-collectioncreate">CollectionCreate</a></emu-xref>(<var>C</var>, <var>items</var>).
+				</li>
+			</ol>
+		</emu-alg>
+	</emu-clause>
+
+	<emu-clause id="sec-weakset.of">
+		<h1><span class="secnum">5</span>WeakSet.of ( ...<var>items</var> )<span class="utils"><span class="anchor"><a href="#sec-weakset.of">#</a></span></span>
+		</h1>
+
+		<p>When the <code>of</code> method is called with any number of arguments, the following steps are taken:</p>
+
+		<emu-alg>
+			<ol>
+				<li>Let <var>items</var> be the
+					<emu-xref href="#sec-list-and-record-specification-type"><a href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type">List</a></emu-xref> of arguments passed to this function.</li>
+				<li>Let <var>C</var> be the <var>this</var> value.</li>
+				<li>Return ?
+					<emu-xref aoid="CollectionCreate"><a href="#sec-collectioncreate">CollectionCreate</a></emu-xref>(<var>C</var>, <var>items</var>).
+				</li>
+			</ol>
+		</emu-alg>
+	</emu-clause>
+
+	<emu-clause id="sec-collectioncreatefrom aoid=" collectioncreatefrom "=" ">
+  <h1><span class="secnum ">6</span>CollectionCreateFrom ( <var>C</var>, <var>source</var> [ , <var>mapfn</var> [ , <var>thisArg</var> ] ] )<span class="utils "><span class="anchor "><a href="#sec-collectioncreatefrom aoid=">#</a></span></span></h1>
+
+  <p>The abstract operation CollectionCreateFrom with arguments <var>C</var>, <var>source</var>, <var>mapfn</var> and <var>thisArg</var>, the following steps are taken:</p>
+
+  <emu-alg><ol><li>If <emu-xref aoid=" IsConstructor "><a href="https://tc39.github.io/ecma262/#sec-isconstructor ">IsConstructor</a></emu-xref>(<var>C</var>) is <emu-val>false</emu-val>, throw a <emu-val>TypeError</emu-val> exception.</li><li>If <var>mapfn</var> is not <emu-val>undefined</emu-val>, then<ol><li>If <emu-xref aoid="IsCallable "><a href="https://tc39.github.io/ecma262/#sec-iscallable ">IsCallable</a></emu-xref>(<var>mapfn</var>) is <emu-val>false</emu-val>, throw a <emu-val>TypeError</emu-val> exception.</li><li>Let <var>mapping</var> be <emu-val>true</emu-val>.</li></ol></li><li>Else, let <var>mapping</var> be <emu-val>false</emu-val>.</li><li>Let <var>usingIterator</var> be ? <emu-xref aoid="GetMethod "><a href="https://tc39.github.io/ecma262/#sec-getmethod ">GetMethod</a></emu-xref>(<var>source</var>, @@iterator).</li><li>Let <var>empty</var> be a new empty <emu-xref href="#sec-list-and-record-specification-type "><a href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type ">List</a></emu-xref>.</li><li>Let <var>targetObj</var> be ? <emu-xref aoid="CollectionCreate "><a href="#sec-collectioncreate ">CollectionCreate</a></emu-xref>(<var>C</var>, « <var>empty</var> »).</li><li>Let <var>add</var> be ? <emu-xref aoid="GetCollectionAddMethod "><a href="#sec-getcollectionaddmethod ">GetCollectionAddMethod</a></emu-xref>(<var>targetObj</var>).</li><li>If <var>usingIterator</var> is not <emu-val>undefined</emu-val>, then<ol><li>Let <var>values</var> be ? IterableToList(<var>source</var>, <var>usingIterator</var>).</li><li>Len <var>len</var> be the number of elements in <var>values</var>.</li><li>Let <var>k</var> be 0.</li><li>Repeat, while <var>k</var> &lt; <var>len</var><ol><li>Let <var>kValue</var> be the first element of <var>values</var> and remove that element from <var>values</var>.</li><li>If <var>mapping</var> is <emu-val>true</emu-val>, then<ol><li>Let <var>mappedValue</var> be ? <emu-xref aoid="Call "><a href="https://tc39.github.io/ecma262/#sec-call ">Call</a></emu-xref>(<var>mapfn</var>, <var>thisArg</var>, « <var>kValue</var>, <var>k</var> »).</li></ol></li><li>Else, let <var>mappedValue</var> be <var>kValue</var>.</li><li>Perform ? <emu-xref aoid="Call "><a href="https://tc39.github.io/ecma262/#sec-call ">Call</a></emu-xref>(<var>add</var>, <var>targetObj</var>, « <var>mappedValue</var> »).</li><li>Increase <var>k</var> by 1.</li></ol></li><li>Assert: <var>values</var> is now an empty <emu-xref href="#sec-list-and-record-specification-type "><a href="https://tc39.github.io/ecma262/#sec-list-and-record-specification-type ">List</a></emu-xref>.</li><li>Return <var>targetObj</var>.</li></ol></li><li>NOTE: <var>source</var> is not an Iterable so assume it is already an array-like object.</li><li>Let <var>arrayLike</var> be ! <emu-xref aoid="ToObject "><a href="https://tc39.github.io/ecma262/#sec-toobject ">ToObject</a></emu-xref>(<var>source</var>).</li><li>Let <var>len</var> be ? <emu-xref aoid="ToLength "><a href="https://tc39.github.io/ecma262/#sec-tolength ">ToLength</a></emu-xref>(? <emu-xref aoid="Get "><a href="https://tc39.github.io/ecma262/#sec-get-o-p ">Get</a></emu-xref>(<var>arrayLike</var>, <code>"length "</code>)).</li><li>Let <var>k</var> be 0.</li><li>Repeat, while <var>k</var> &lt; <var>len</var><ol><li>Let <var>Pk</var> be ! <emu-xref aoid="ToString "><a href="https://tc39.github.io/ecma262/#sec-tostring ">ToString</a></emu-xref>(<var>k</var>).</li><li>Let <var>kValue</var> be ? <emu-xref aoid="Get "><a href="https://tc39.github.io/ecma262/#sec-get-o-p ">Get</a></emu-xref>(<var>arrayLike</var>, <var>Pk</var>).</li><li>If <var>mapping</var> is <emu-val>true</emu-val>, then<ol><li>Let <var>mappedValue</var> be ? <emu-xref aoid="Call "><a href="https://tc39.github.io/ecma262/#sec-call ">Call</a></emu-xref>(<var>mapfn</var>, <var>thisArg</var>, « <var>kValue</var>, <var>k</var> »).</li></ol></li><li>Else, let <var>mappedValue</var> be <var>kValue</var>.</li><li>Perform ? <emu-xref aoid="Call "><a href="https://tc39.github.io/ecma262/#sec-call ">Call</a></emu-xref>(<var>add</var>, <var>targetObj</var>, « <var>mappedValue</var> »).</li><li>Increase <var>k</var> by 1.</li></ol></li><li>Return <var>targetObj</var>.
+  </li></ol></emu-alg>
+
+  <emu-clause id="sec-getcollectionaddmethod " aoid="GetCollectionAddMethod ">
+    <h1><span class="secnum ">6.1</span>Runtime Semantics: GetCollectionAddMethod( <var>target</var> )<span class="utils "><span class="anchor "><a href="#sec-getcollectionaddmethod ">#</a></span></span></h1>
+
+    <p>The abstract operation GetCollectionAddMethod performs the following steps:</p>
+
+    <emu-alg><ol><li>Let <var>proto</var> be the <var>target</var>.[[GetPrototypeOf]]()</li><li>If <var>proto</var> is <emu-val>null</emu-val>, throw a TypeError exception.</li><li>If <var>proto</var> is one of the <code>%SetPrototype%</code> or <code>%WeapSetPrototype%</code> intrinsic objects,<ol><li>Let <var>method</var> be ? <emu-xref aoid="Get "><a href="https://tc39.github.io/ecma262/#sec-get-o-p ">Get</a></emu-xref>(<var>target</var>, "add ").</li></ol></li><li>Else, let <var>method</var> be ? <emu-xref aoid="Get "><a href="https://tc39.github.io/ecma262/#sec-get-o-p ">Get</a></emu-xref>(<var>target</var>, "set ").</li><li>If <emu-xref aoid="IsCallable "><a href="https://tc39.github.io/ecma262/#sec-iscallable ">IsCallable</a></emu-xref>(<var>method</var>) is <emu-val>false</emu-val>, throw a TypeError exception.</li><li>Return <var>method</var>
+    </li></ol></emu-alg>
+
+    <p>NOTE: This operation will try to get the <code>add</code> method from <code>Set</code> and <code>WeakSet</code> otherwise it will try to get a <code>set</code> method from any other object.</p>
+  </emu-clause>
+</emu-clause>
+
+<emu-clause id="sec-map.from ">
+  <h1><span class="secnum ">7</span>Map.from ( <var>source</var> [ , <var>mapFn</var> [ , <var>thisArg</var> ] ] )<span class="utils "><span class="anchor "><a href="#sec-map.from ">#</a></span></span></h1>
+
+  <p>When the <code>from</code> method is called with argument <var>source</var>, and optional arguments <var>mapfn</var> and <var>thisArg</var>, the following steps are taken:</p>
+
+  <emu-alg><ol><li>Let <var>C</var> be the <var>this</var> value.</li><li>Return ? <emu-xref aoid="CollectionCreate "><a href="#sec-collectioncreate ">CollectionCreate</a></emu-xref>(<var>C</var>, <var>source</var>, <var>mapFn</var>, <var>thisArg</var>).
+  </li></ol></emu-alg>
+</emu-clause>
+
+<emu-clause id="sec-set.from ">
+  <h1><span class="secnum ">8</span>Set.from ( <var>source</var> [ , <var>mapFn</var> [ , <var>thisArg</var> ] ] )<span class="utils "><span class="anchor "><a href="#sec-set.from ">#</a></span></span></h1>
+
+  <p>When the <code>from</code> method is called with argument <var>source</var>, and optional arguments <var>mapfn</var> and <var>thisArg</var>, the following steps are taken:</p>
+
+  <emu-alg><ol><li>Let <var>C</var> be the <var>this</var> value.</li><li>Return ? <emu-xref aoid="CollectionCreate "><a href="#sec-collectioncreate ">CollectionCreate</a></emu-xref>(<var>C</var>, <var>source</var>, <var>mapFn</var>, <var>thisArg</var>).
+  </li></ol></emu-alg>
+</emu-clause>
+
+<emu-clause id="sec-weakmap.from ">
+  <h1><span class="secnum ">9</span>WeakMap.from ( <var>source</var> [ , <var>mapFn</var> [ , <var>thisArg</var> ] ] )<span class="utils "><span class="anchor "><a href="#sec-weakmap.from ">#</a></span></span></h1>
+
+  <p>When the <code>from</code> method is called with argument <var>source</var>, and optional arguments <var>mapfn</var> and <var>thisArg</var>, the following steps are taken:</p>
+
+  <emu-alg><ol><li>Let <var>C</var> be the <var>this</var> value.</li><li>Return ? <emu-xref aoid="CollectionCreate "><a href="#sec-collectioncreate ">CollectionCreate</a></emu-xref>(<var>C</var>, <var>source</var>, <var>mapFn</var>, <var>thisArg</var>).
+  </li></ol></emu-alg>
+</emu-clause>
+
+<emu-clause id="sec-weakset.from ">
+  <h1><span class="secnum ">10</span>WeakSet.from ( <var>source</var> [ , <var>mapFn</var> [ , <var>thisArg</var> ] ] )<span class="utils "><span class="anchor "><a href="#sec-weakset.from ">#</a></span></span></h1>
+
+  <p>When the <code>from</code> method is called with argument <var>source</var>, and optional arguments <var>mapfn</var> and <var>thisArg</var>, the following steps are taken:</p>
+
+  <emu-alg><ol><li>Let <var>C</var> be the <var>this</var> value.</li><li>Return ? <emu-xref aoid="CollectionCreate "><a href="#sec-collectioncreate ">CollectionCreate</a></emu-xref>(<var>C</var>, <var>source</var>, <var>mapFn</var>, <var>thisArg</var>).
+  </li></ol></emu-alg>
+</emu-clause>
+
+</body>
