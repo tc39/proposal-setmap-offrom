@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="./spec.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+<script src="./spec.js"></script>
+<pre class="metadata">
+title: Set and Map .of and .from
+stage: 0
+location: https://github.com/leobalter/proposal-setmap-offrom
+copyright: false
+contributors: Leo Balter
+</pre>
+
+<emu-clause id="sec-collectioncreate" aoid="CollectionCreate">
+  <h1>CollectionCreate (_C_, _iterable_)</h1>
+  <p>The abstract operation CollectionCreate with arguments _C_ and _iterable_ (any valid iterable object) is used to specify the creation of new collection objects. It performs the following steps:</p>
+  <emu-alg>
+    1. Assert: _iterable_ is an iterable object.
+    1. If IsConstructor(_C_) is *false*, throw a TypeError exception.
+    1. Let _collection_ be ? Construct(_C_, &laquo; _items_ &raquo;).
+    1. Return _collection_.
+  </emu-alg>
+</emu-clause>
+
+<emu-clause id="sec-set.of">
+  <h1>Set.of ( ..._items_ )</h1>
+
+  <p>When the `of` method is called with any number of arguments, the following steps are taken:</p>
+
+  <emu-alg>
+    1. Let _items_ be the List of arguments passed to this function.
+    1. Let _C_ be the _this_ value.
+    1. Return ? CollectionCreate(_C_, _items_).
+  </emu-alg>
+</emu-clause>
+
+<emu-clause id="sec-weakset.of">
+  <h1>WeakSet.of ( ..._items_ )</h1>
+
+  <p>When the `of` method is called with any number of arguments, the following steps are taken:</p>
+
+  <emu-alg>
+    1. Let _items_ be the List of arguments passed to this function.
+    1. Let _C_ be the _this_ value.
+    1. Return ? CollectionCreate(_C_, _items_).
+  </emu-alg>
+</emu-clause>
+
+<emu-clause id="sec-map.of">
+  <h1>Map.of ( ..._items_ )</h1>
+
+  <p>When the `of` method is called with any number of arguments, the following steps are taken:</p>
+
+  <emu-alg>
+    1. Let _items_ be the List of arguments passed to this function.
+    1. Let _C_ be the _this_ value.
+    1. Return ? CollectionCreate(_C_, _items_).
+  </emu-alg>
+</emu-clause>
+
+<emu-clause id="sec-weakmap.of">
+  <h1>WeakMap.of ( ..._items_ )</h1>
+
+  <p>When the `of` method is called with any number of arguments, the following steps are taken:</p>
+
+  <emu-alg>
+    1. Let _items_ be the List of arguments passed to this function.
+    1. Let _C_ be the _this_ value.
+    1. Return ? CollectionCreate(_C_, _items_).
+  </emu-alg>
+</emu-clause>

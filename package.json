@@ -1,0 +1,11 @@
+{
+  "name": "proposal-setmap-offrom",
+  "version": "0.0.0",
+  "description": "TC39 Proposal for Set and Map .of and .from methods",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Leo Balter",
+  "license": "MIT"
+}
