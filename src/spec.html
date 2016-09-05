@@ -22,30 +22,6 @@ contributors: Leo Balter
   </emu-alg>
 </emu-clause>
 
-<emu-clause id="sec-set.of">
-  <h1>Set.of ( ..._items_ )</h1>
-
-  <p>When the `of` method is called with any number of arguments, the following steps are taken:</p>
-
-  <emu-alg>
-    1. Let _items_ be the List of arguments passed to this function.
-    1. Let _C_ be the _this_ value.
-    1. Return ? CollectionCreate(_C_, _items_).
-  </emu-alg>
-</emu-clause>
-
-<emu-clause id="sec-weakset.of">
-  <h1>WeakSet.of ( ..._items_ )</h1>
-
-  <p>When the `of` method is called with any number of arguments, the following steps are taken:</p>
-
-  <emu-alg>
-    1. Let _items_ be the List of arguments passed to this function.
-    1. Let _C_ be the _this_ value.
-    1. Return ? CollectionCreate(_C_, _items_).
-  </emu-alg>
-</emu-clause>
-
 <emu-clause id="sec-map.of">
   <h1>Map.of ( ..._items_ )</h1>
 
@@ -58,8 +34,32 @@ contributors: Leo Balter
   </emu-alg>
 </emu-clause>
 
+<emu-clause id="sec-set.of">
+  <h1>Set.of ( ..._items_ )</h1>
+
+  <p>When the `of` method is called with any number of arguments, the following steps are taken:</p>
+
+  <emu-alg>
+    1. Let _items_ be the List of arguments passed to this function.
+    1. Let _C_ be the _this_ value.
+    1. Return ? CollectionCreate(_C_, _items_).
+  </emu-alg>
+</emu-clause>
+
 <emu-clause id="sec-weakmap.of">
   <h1>WeakMap.of ( ..._items_ )</h1>
+
+  <p>When the `of` method is called with any number of arguments, the following steps are taken:</p>
+
+  <emu-alg>
+    1. Let _items_ be the List of arguments passed to this function.
+    1. Let _C_ be the _this_ value.
+    1. Return ? CollectionCreate(_C_, _items_).
+  </emu-alg>
+</emu-clause>
+
+<emu-clause id="sec-weakset.of">
+  <h1>WeakSet.of ( ..._items_ )</h1>
 
   <p>When the `of` method is called with any number of arguments, the following steps are taken:</p>
 
