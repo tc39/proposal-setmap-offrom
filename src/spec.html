@@ -15,12 +15,12 @@ contributors:
 </pre>
 
 <emu-clause id="sec-collectioncreate" aoid="CollectionCreate">
-  <h1>CollectionCreate ( _C_, _iterable_ )</h1>
-  <p>The abstract operation CollectionCreate with arguments _C_ and _iterable_ (any valid iterable object) is used to specify the creation of new collection objects. It performs the following steps:</p>
+  <h1>CollectionCreate ( _C_, _iterator_ )</h1>
+  <p>The abstract operation CollectionCreate with arguments _C_ and _iterator_ is used to specify the creation of new collection objects. It performs the following steps:</p>
   <emu-alg>
-    1. Assert: _iterable_ is an iterable object.
+    1. Assert: _iterator_ is a ListIterator.
     1. If IsConstructor(_C_) is *false*, throw a TypeError exception.
-    1. Let _collection_ be ? Construct(_C_, &laquo; _items_ &raquo;).
+    1. Let _collection_ be ? Construct(_C_, &laquo; _iterator_ &raquo;).
     1. Return _collection_.
   </emu-alg>
 </emu-clause>
@@ -32,8 +32,9 @@ contributors:
 
   <emu-alg>
     1. Let _items_ be the List of arguments passed to this function.
+    1. Let _iterator_ be CreateListIterator(_items_).
     1. Let _C_ be the _this_ value.
-    1. Return ? CollectionCreate(_C_, _items_).
+    1. Return ? CollectionCreate(_C_, _iterator_).
   </emu-alg>
 </emu-clause>
 
@@ -44,8 +45,9 @@ contributors:
 
   <emu-alg>
     1. Let _items_ be the List of arguments passed to this function.
+    1. Let _iterator_ be CreateListIterator(_items_).
     1. Let _C_ be the _this_ value.
-    1. Return ? CollectionCreate(_C_, _items_).
+    1. Return ? CollectionCreate(_C_, _iterator_).
   </emu-alg>
 </emu-clause>
 
@@ -56,8 +58,9 @@ contributors:
 
   <emu-alg>
     1. Let _items_ be the List of arguments passed to this function.
+    1. Let _iterator_ be CreateListIterator(_items_).
     1. Let _C_ be the _this_ value.
-    1. Return ? CollectionCreate(_C_, _items_).
+    1. Return ? CollectionCreate(_C_, _iterator_).
   </emu-alg>
 </emu-clause>
 
@@ -68,8 +71,9 @@ contributors:
 
   <emu-alg>
     1. Let _items_ be the List of arguments passed to this function.
+    1. Let _iterator_ be CreateListIterator(_items_).
     1. Let _C_ be the _this_ value.
-    1. Return ? CollectionCreate(_C_, _items_).
+    1. Return ? CollectionCreate(_C_, _iterator_).
   </emu-alg>
 </emu-clause>
 
@@ -86,7 +90,8 @@ contributors:
     1. Else, let _mapping_ be *false*.
     1. Let _usingIterator_ be ? GetMethod(_source_, @@iterator).
     1. Let _empty_ be a new empty List.
-    1. Let _targetObj_ be ? CollectionCreate(_C_, &laquo; _empty_ &raquo;).
+    1. Let _iter_ be CreateListIterator(_empty_).
+    1. Let _targetObj_ be ? CollectionCreate(_C_, _iter_).
     1. Let _add_ be ? GetCollectionAddMethod(_targetObj_).
     1. If _usingIterator_ is not *undefined*, then
       1. Let _values_ be ? IterableToList(_source_, _usingIterator_).
@@ -142,7 +147,7 @@ contributors:
 
   <emu-alg>
     1. Let _C_ be the _this_ value.
-    1. Return ? CollectionCreate(_C_, _source_, _mapFn_, _thisArg_).
+    1. Return ? CollectionCreateFrom(_C_, _source_, _mapFn_, _thisArg_).
   </emu-alg>
 </emu-clause>
 
@@ -153,7 +158,7 @@ contributors:
 
   <emu-alg>
     1. Let _C_ be the _this_ value.
-    1. Return ? CollectionCreate(_C_, _source_, _mapFn_, _thisArg_).
+    1. Return ? CollectionCreateFrom(_C_, _source_, _mapFn_, _thisArg_).
   </emu-alg>
 </emu-clause>
 
@@ -164,7 +169,7 @@ contributors:
 
   <emu-alg>
     1. Let _C_ be the _this_ value.
-    1. Return ? CollectionCreate(_C_, _source_, _mapFn_, _thisArg_).
+    1. Return ? CollectionCreateFrom(_C_, _source_, _mapFn_, _thisArg_).
   </emu-alg>
 </emu-clause>
 
@@ -175,7 +180,7 @@ contributors:
 
   <emu-alg>
     1. Let _C_ be the _this_ value.
-    1. Return ? CollectionCreate(_C_, _source_, _mapFn_, _thisArg_).
+    1. Return ? CollectionCreateFrom(_C_, _source_, _mapFn_, _thisArg_).
   </emu-alg>
 </emu-clause>
 
