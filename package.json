@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf out",
-    "build": "npm run clean && mkdir -p out && ecmarkup src/spec.html --js=out/spec.js --css=out/spec.css | js-beautify -f - --type=html -t > out/index.html"
+    "build": "npm run clean && mkdir -p out && ecmarkup src/spec.html --js=out/spec.js --css=out/spec.css out/index.html"
   },
   "author": "Leo Balter",
   "license": "BSD",
@@ -19,7 +19,6 @@
     "test262"
   ],
   "devDependencies": {
-    "ecmarkup": "^3.5.1",
-    "js-beautify": "^1.6.4"
+    "ecmarkup": "^3.5.1"
   }
 }
