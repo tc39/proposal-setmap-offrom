@@ -15,14 +15,34 @@ contributors:
 </pre>
 
 <emu-clause id="sec-collectioncreate" aoid="CollectionCreate">
-  <h1>CollectionCreate ( _C_, _iterator_ )</h1>
-  <p>The abstract operation CollectionCreate with arguments _C_ and _iterator_ is used to specify the creation of new collection objects. It performs the following steps:</p>
+  <h1>CollectionCreate ( _C_, _source_ [ , _mapfn_ [ , _thisArg_ ] ] )</h1>
+
+  <p>The abstract operation CollectionCreate with arguments _C_, _source_, _mapfn_ and _thisArg_ performs the following steps:</p>
+
   <emu-alg>
-    1. Assert: _iterator_ is a ListIterator.
-    1. If IsConstructor(_C_) is *false*, throw a TypeError exception.
-    1. Let _collection_ be ? Construct(_C_, &laquo; _iterator_ &raquo;).
-    1. Return _collection_.
+    1. If IsConstructor(_C_) is *false*, throw a *TypeError* exception.
+    1. If _mapfn_ is *undefined*, let mapping be false.
+    1. Else,
+      1. If IsCallable(_mapfn_) is *false*, throw a *TypeError* exception.
+      1. Let _mapping_ be *true*.
+    1. If _source_ is either *undefined* or *null*,
+      1. Return ? Construct(_C_, &laquo; &raquo;).
+    1. Let _A_ be ArrayCreate(0).
+    1. Let _iter_ be ? GetIterator(_source_).
+    1. Let _n_ be 0.
+    1. Repeat,
+      1. Let _next_ be ? IteratorStep(_iter_).
+      1. If _next_is *false*, return ? Construct(_C_, &laquo; _A_ &raquo;).
+      1. Let _nextItem_ be ? IteratorValue(_next_).
+      1. If _mapping_ is *true*, then
+        1. Let _value_ be Call(_mapfn_, _thisArg_, &laquo; _nextItem_, _n_ &raquo;).
+        1. If _value_ is an abrupt completion, return ? IteratorClose(_iter_, _value_).
+      1. Else, Let _value_ be _nextItem_.
+      1. Let _status_ be ? CreateDataProperty(_A_, ! ToString(_n_), _value_).
+      1. If _status_ is an abrupt completion, return ? IteratorClose(_iter_, _status_).
+      1. Increment _n_ by *1*.
   </emu-alg>
+
 </emu-clause>
 
 <emu-clause id="sec-map.of">
@@ -77,36 +97,6 @@ contributors:
   </emu-alg>
 </emu-clause>
 
-<emu-clause id="sec-collectioncreatefrom aoid="CollectionCreateFrom">
-  <h1>CollectionCreateFrom ( _C_, _source_, _mapfn_, _thisArg_ )</h1>
-
-  <p>The abstract operation CollectionCreateFrom with arguments _C_, _source_, _mapfn_ and _thisArg_, the following steps are taken:</p>
-
-  <emu-alg>
-    1. If IsConstructor(_C_) is *false*, throw a *TypeError* exception.
-    1. If _mapfn_ is not *undefined*, then
-      1. If IsCallable(_mapfn_) is *false*, throw a *TypeError* exception.
-      1. Let _mapping_ be *true*.
-    1. Else, let _mapping_ be *false*.
-    1. If _source_ is either *undefined* or *null*,
-      1. Return ? Construct(_C_, &laquo; &raquo;).
-    1. Let _A_ be ArrayCreate(0).
-    1. Let _iter_ be ? GetIterator(_source_).
-    1. Let _n_ be 0.
-    1. Repeat,
-      1. Let _next_ be ? IteratorStep(_iter_).
-      1. If _next_is *false*, return ? Construct(_C_, &laquo; _A_ &raquo;).
-      1. Let _nextItem_ be ? IteratorValue(_next_).
-      1. If _mapping_ is *true*, then
-        1. Let _value_ be Call(_mapfn_, _thisArg_, &laquo; _nextItem_, _n_ &raquo;).
-        1. If _value_ is an abrupt completion, return ? IteratorClose(_iter_, _value_).
-      1. Else, Let _value_ be _nextItem_.
-      1. Let _status_ be ? CreateDataProperty(_A_, ! ToString(_n_), _value_).
-      1. If _status_ is an abrupt completion, return ? IteratorClose(_iter_, _status_).
-      1. Increment _n_ by *1*.
-  </emu-alg>
-
-</emu-clause>
 
 <emu-clause id="sec-map.from">
   <h1>Map.from ( _source_ [ , _mapFn_ [ , _thisArg_ ] ] )</h1>
@@ -115,7 +105,7 @@ contributors:
 
   <emu-alg>
     1. Let _C_ be the _this_ value.
-    1. Return ? CollectionCreateFrom(_C_, _source_, _mapFn_, _thisArg_).
+    1. Return ? CollectionCreate(_C_, _source_, _mapFn_, _thisArg_).
   </emu-alg>
 </emu-clause>
 
@@ -126,7 +116,7 @@ contributors:
 
   <emu-alg>
     1. Let _C_ be the _this_ value.
-    1. Return ? CollectionCreateFrom(_C_, _source_, _mapFn_, _thisArg_).
+    1. Return ? CollectionCreate(_C_, _source_, _mapFn_, _thisArg_).
   </emu-alg>
 </emu-clause>
 
@@ -137,7 +127,7 @@ contributors:
 
   <emu-alg>
     1. Let _C_ be the _this_ value.
-    1. Return ? CollectionCreateFrom(_C_, _source_, _mapFn_, _thisArg_).
+    1. Return ? CollectionCreate(_C_, _source_, _mapFn_, _thisArg_).
   </emu-alg>
 </emu-clause>
 
@@ -148,7 +138,7 @@ contributors:
 
   <emu-alg>
     1. Let _C_ be the _this_ value.
-    1. Return ? CollectionCreateFrom(_C_, _source_, _mapFn_, _thisArg_).
+    1. Return ? CollectionCreate(_C_, _source_, _mapFn_, _thisArg_).
   </emu-alg>
 </emu-clause>
 
