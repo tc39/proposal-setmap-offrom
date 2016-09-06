@@ -78,9 +78,9 @@ contributors:
 </emu-clause>
 
 <emu-clause id="sec-collectioncreatefrom aoid="CollectionCreateFrom">
-  <h1>CollectionCreateFrom ( _C_, _source_ [ , _mapfn_ [ , _thisArg_ ] ] )</h1>
+  <h1>CollectionCreateFrom ( _C_, _source_, _adder_ [ , _mapfn_ [ , _thisArg_ ] ] )</h1>
 
-  <p>The abstract operation CollectionCreateFrom with arguments _C_, _source_, _mapfn_ and _thisArg_, the following steps are taken:</p>
+  <p>The abstract operation CollectionCreateFrom with arguments _C_, _source_, _adder_, _mapfn_ and _thisArg_, the following steps are taken:</p>
 
   <emu-alg>
     1. If IsConstructor(_C_) is *false*, throw a *TypeError* exception.
@@ -102,7 +102,7 @@ contributors:
         1. If _mapping_ is *true*, then
           1. Let _mappedValue_ be ? Call(_mapfn_, _thisArg_, &laquo; _kValue_, _k_ &raquo;).
         1. Else, let _mappedValue_ be _kValue_.
-        1. Perform ? Call(_add_, _targetObj_, &laquo; _mappedValue_ &raquo;).
+        1. Perform ? Call(_adder_, _targetObj_, &laquo; _mappedValue_ &raquo;).
         1. Increase _k_ by 1.
       1. Assert: _values_ is now an empty List.
       1. Return _targetObj_.
@@ -116,28 +116,11 @@ contributors:
       1. If _mapping_ is *true*, then
         1. Let _mappedValue_ be ? Call(_mapfn_, _thisArg_, &laquo; _kValue_, _k_ &raquo;).
       1. Else, let _mappedValue_ be _kValue_.
-      1. Perform ? Call(_add_, _targetObj_, &laquo; _mappedValue_ &raquo;).
+      1. Perform ? Call(_adder_, _targetObj_, &laquo; _mappedValue_ &raquo;).
       1. Increase _k_ by 1.
     1. Return _targetObj_.
   </emu-alg>
 
-  <emu-clause id="sec-getcollectionaddmethod" aoid="GetCollectionAddMethod">
-    <h1>Runtime Semantics: GetCollectionAddMethod( _target_ )</h1>
-
-    <p>The abstract operation GetCollectionAddMethod performs the following steps:</p>
-
-    <emu-alg>
-      1. Let _proto_ be the _target_.[[GetPrototypeOf]]()
-      1. If _proto_ is *null*, throw a TypeError exception.
-      1. If _proto_ is one of the `%SetPrototype%` or `%WeapSetPrototype%` intrinsic objects,
-        1. Let _method_ be ? Get(_target_, "add").
-      1. Else, let _method_ be ? Get(_target_, "set").
-      1. If IsCallable(_method_) is *false*, throw a TypeError exception.
-      1. Return _method_
-    </emu-alg>
-
-    <p>NOTE: This operation will try to get the `add` method from `Set` and `WeakSet` otherwise it will try to get a `set` method from any other object.</p>
-  </emu-clause>
 </emu-clause>
 
 <emu-clause id="sec-map.from">
@@ -147,7 +130,7 @@ contributors:
 
   <emu-alg>
     1. Let _C_ be the _this_ value.
-    1. Return ? CollectionCreateFrom(_C_, _source_, _mapFn_, _thisArg_).
+    1. Return ? CollectionCreateFrom(_C_, _source_, "set", _mapFn_, _thisArg_).
   </emu-alg>
 </emu-clause>
 
@@ -158,7 +141,7 @@ contributors:
 
   <emu-alg>
     1. Let _C_ be the _this_ value.
-    1. Return ? CollectionCreateFrom(_C_, _source_, _mapFn_, _thisArg_).
+    1. Return ? CollectionCreateFrom(_C_, _source_, "add", _mapFn_, _thisArg_).
   </emu-alg>
 </emu-clause>
 
@@ -169,7 +152,7 @@ contributors:
 
   <emu-alg>
     1. Let _C_ be the _this_ value.
-    1. Return ? CollectionCreateFrom(_C_, _source_, _mapFn_, _thisArg_).
+    1. Return ? CollectionCreateFrom(_C_, _source_, "set", _mapFn_, _thisArg_).
   </emu-alg>
 </emu-clause>
 
@@ -180,7 +163,7 @@ contributors:
 
   <emu-alg>
     1. Let _C_ be the _this_ value.
-    1. Return ? CollectionCreateFrom(_C_, _source_, _mapFn_, _thisArg_).
+    1. Return ? CollectionCreateFrom(_C_, _source_, "add", _mapFn_, _thisArg_).
   </emu-alg>
 </emu-clause>
 
