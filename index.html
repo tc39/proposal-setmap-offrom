@@ -17,12 +17,12 @@
 			"type": "clause",
 			"id": "sec-collectioncreate",
 			"aoid": "CollectionCreate",
-			"title": "CollectionCreate ( C, iterator )",
-			"titleHTML": "CollectionCreate ( <var>C</var>, <var>iterator</var> )",
+			"title": "CollectionCreate ( C, source [ , mapfn [ , thisArg ] ] )",
+			"titleHTML": "CollectionCreate ( <var>C</var>, <var>source</var> [ , <var>mapfn</var> [ , <var>thisArg</var> ] ] )",
 			"number": "1",
 			"namespace": "https://github.com/leobalter/proposal-setmap-offrom",
 			"location": "",
-			"key": "CollectionCreate ( C, iterator )"
+			"key": "CollectionCreate ( C, source [ , mapfn [ , thisArg ] ] )"
 		}, {
 			"type": "clause",
 			"id": "sec-map.of",
@@ -65,21 +65,11 @@
 			"key": "WeakSet.of ( ...items )"
 		}, {
 			"type": "clause",
-			"id": "sec-collectioncreatefrom aoid=",
-			"aoid": null,
-			"title": "CollectionCreateFrom ( C, source, mapfn, thisArg )",
-			"titleHTML": "CollectionCreateFrom ( <var>C</var>, <var>source</var>, <var>mapfn</var>, <var>thisArg</var> )",
-			"number": "6",
-			"namespace": "https://github.com/leobalter/proposal-setmap-offrom",
-			"location": "",
-			"key": "CollectionCreateFrom ( C, source, mapfn, thisArg )"
-		}, {
-			"type": "clause",
 			"id": "sec-map.from",
 			"aoid": null,
 			"title": "Map.from ( source [ , mapFn [ , thisArg ] ] )",
 			"titleHTML": "Map.from ( <var>source</var> [ , <var>mapFn</var> [ , <var>thisArg</var> ] ] )",
-			"number": "7",
+			"number": "6",
 			"namespace": "https://github.com/leobalter/proposal-setmap-offrom",
 			"location": "",
 			"key": "Map.from ( source [ , mapFn [ , thisArg ] ] )"
@@ -89,7 +79,7 @@
 			"aoid": null,
 			"title": "Set.from ( source [ , mapFn [ , thisArg ] ] )",
 			"titleHTML": "Set.from ( <var>source</var> [ , <var>mapFn</var> [ , <var>thisArg</var> ] ] )",
-			"number": "8",
+			"number": "7",
 			"namespace": "https://github.com/leobalter/proposal-setmap-offrom",
 			"location": "",
 			"key": "Set.from ( source [ , mapFn [ , thisArg ] ] )"
@@ -99,7 +89,7 @@
 			"aoid": null,
 			"title": "WeakMap.from ( source [ , mapFn [ , thisArg ] ] )",
 			"titleHTML": "WeakMap.from ( <var>source</var> [ , <var>mapFn</var> [ , <var>thisArg</var> ] ] )",
-			"number": "9",
+			"number": "8",
 			"namespace": "https://github.com/leobalter/proposal-setmap-offrom",
 			"location": "",
 			"key": "WeakMap.from ( source [ , mapFn [ , thisArg ] ] )"
@@ -109,7 +99,7 @@
 			"aoid": null,
 			"title": "WeakSet.from ( source [ , mapFn [ , thisArg ] ] )",
 			"titleHTML": "WeakSet.from ( <var>source</var> [ , <var>mapFn</var> [ , <var>thisArg</var> ] ] )",
-			"number": "10",
+			"number": "9",
 			"namespace": "https://github.com/leobalter/proposal-setmap-offrom",
 			"location": "",
 			"key": "WeakSet.from ( source [ , mapFn [ , thisArg ] ] )"
@@ -135,16 +125,15 @@
 		</div>
 		<div id="menu-toc">
 			<ol class="toc">
-				<li><span class="item-toggle-none"></span><a href="#sec-collectioncreate" title="CollectionCreate ( C, iterator )"><span class="secnum">1</span> CollectionCreate ( <var>C</var>, <var>iterator</var> )</a></li>
+				<li><span class="item-toggle-none"></span><a href="#sec-collectioncreate" title="CollectionCreate ( C, source [ , mapfn [ , thisArg ] ] )"><span class="secnum">1</span> CollectionCreate ( <var>C</var>, <var>source</var> [ , <var>mapfn</var> [ , <var>thisArg</var> ] ] )</a></li>
 				<li><span class="item-toggle-none"></span><a href="#sec-map.of" title="Map.of ( ...items )"><span class="secnum">2</span> Map.of ( ...<var>items</var> )</a></li>
 				<li><span class="item-toggle-none"></span><a href="#sec-set.of" title="Set.of ( ...items )"><span class="secnum">3</span> Set.of ( ...<var>items</var> )</a></li>
 				<li><span class="item-toggle-none"></span><a href="#sec-weakmap.of" title="WeakMap.of ( ...items )"><span class="secnum">4</span> WeakMap.of ( ...<var>items</var> )</a></li>
 				<li><span class="item-toggle-none"></span><a href="#sec-weakset.of" title="WeakSet.of ( ...items )"><span class="secnum">5</span> WeakSet.of ( ...<var>items</var> )</a></li>
-				<li><span class="item-toggle-none"></span><a href="#sec-collectioncreatefrom aoid=" title="CollectionCreateFrom ( C, source, mapfn, thisArg )"><span class="secnum">6</span> CollectionCreateFrom ( <var>C</var>, <var>source</var>, <var>mapfn</var>, <var>thisArg</var> )</a></li>
-				<li><span class="item-toggle-none"></span><a href="#sec-map.from" title="Map.from ( source [ , mapFn [ , thisArg ] ] )"><span class="secnum">7</span> Map.from ( <var>source</var> [ , <var>mapFn</var> [ , <var>thisArg</var> ] ] )</a></li>
-				<li><span class="item-toggle-none"></span><a href="#sec-set.from" title="Set.from ( source [ , mapFn [ , thisArg ] ] )"><span class="secnum">8</span> Set.from ( <var>source</var> [ , <var>mapFn</var> [ , <var>thisArg</var> ] ] )</a></li>
-				<li><span class="item-toggle-none"></span><a href="#sec-weakmap.from" title="WeakMap.from ( source [ , mapFn [ , thisArg ] ] )"><span class="secnum">9</span> WeakMap.from ( <var>source</var> [ , <var>mapFn</var> [ , <var>thisArg</var> ] ] )</a></li>
-				<li><span class="item-toggle-none"></span><a href="#sec-weakset.from" title="WeakSet.from ( source [ , mapFn [ , thisArg ] ] )"><span class="secnum">10</span> WeakSet.from ( <var>source</var> [ , <var>mapFn</var> [ , <var>thisArg</var> ] ] )</a></li>
+				<li><span class="item-toggle-none"></span><a href="#sec-map.from" title="Map.from ( source [ , mapFn [ , thisArg ] ] )"><span class="secnum">6</span> Map.from ( <var>source</var> [ , <var>mapFn</var> [ , <var>thisArg</var> ] ] )</a></li>
+				<li><span class="item-toggle-none"></span><a href="#sec-set.from" title="Set.from ( source [ , mapFn [ , thisArg ] ] )"><span class="secnum">7</span> Set.from ( <var>source</var> [ , <var>mapFn</var> [ , <var>thisArg</var> ] ] )</a></li>
+				<li><span class="item-toggle-none"></span><a href="#sec-weakmap.from" title="WeakMap.from ( source [ , mapFn [ , thisArg ] ] )"><span class="secnum">8</span> WeakMap.from ( <var>source</var> [ , <var>mapFn</var> [ , <var>thisArg</var> ] ] )</a></li>
+				<li><span class="item-toggle-none"></span><a href="#sec-weakset.from" title="WeakSet.from ( source [ , mapFn [ , thisArg ] ] )"><span class="secnum">9</span> WeakSet.from ( <var>source</var> [ , <var>mapFn</var> [ , <var>thisArg</var> ] ] )</a></li>
 				<li><span class="item-toggle-none"></span><a href="#sec-copyright-and-software-license" title="Copyright &amp; Software License"><span class="secnum">A</span> Copyright &amp; Software License</a></li>
 			</ol>
 		</div>
@@ -153,21 +142,76 @@
 	<h1 class="title">Set and Map <code>.of</code> and <code>.from</code></h1>
 
 	<emu-clause id="sec-collectioncreate" aoid="CollectionCreate">
-		<h1><span class="secnum">1</span>CollectionCreate ( <var>C</var>, <var>iterator</var> )<span class="utils"><span class="anchor"><a href="#sec-collectioncreate">#</a></span></span>
+		<h1><span class="secnum">1</span>CollectionCreate ( <var>C</var>, <var>source</var> [ , <var>mapfn</var> [ , <var>thisArg</var> ] ] )<span class="utils"><span class="anchor"><a href="#sec-collectioncreate">#</a></span></span>
 		</h1>
-		<p>The abstract operation CollectionCreate with arguments <var>C</var> and <var>iterator</var> is used to specify the creation of new collection objects. It performs the following steps:</p>
+
+		<p>The abstract operation CollectionCreate with arguments <var>C</var>, <var>source</var>, <var>mapfn</var> and <var>thisArg</var> performs the following steps:</p>
+
 		<emu-alg>
 			<ol>
-				<li>Assert: <var>iterator</var> is a ListIterator.</li>
 				<li>If
 					<emu-xref aoid="IsConstructor"><a href="https://tc39.github.io/ecma262/#sec-isconstructor">IsConstructor</a></emu-xref>(<var>C</var>) is
-					<emu-val>false</emu-val>, throw a TypeError exception.</li>
-				<li>Let <var>collection</var> be ?
-					<emu-xref aoid="Construct"><a href="https://tc39.github.io/ecma262/#sec-construct">Construct</a></emu-xref>(<var>C</var>, « <var>iterator</var> »).</li>
-				<li>Return <var>collection</var>.
+					<emu-val>false</emu-val>, throw a
+					<emu-val>TypeError</emu-val> exception.</li>
+				<li>If <var>mapfn</var> is
+					<emu-val>undefined</emu-val>, let mapping be false.</li>
+				<li>Else,
+					<ol>
+						<li>If
+							<emu-xref aoid="IsCallable"><a href="https://tc39.github.io/ecma262/#sec-iscallable">IsCallable</a></emu-xref>(<var>mapfn</var>) is
+							<emu-val>false</emu-val>, throw a
+							<emu-val>TypeError</emu-val> exception.</li>
+						<li>Let <var>mapping</var> be
+							<emu-val>true</emu-val>.</li>
+					</ol>
+				</li>
+				<li>If <var>source</var> is either
+					<emu-val>undefined</emu-val> or
+					<emu-val>null</emu-val>,
+					<ol>
+						<li>Return ?
+							<emu-xref aoid="Construct"><a href="https://tc39.github.io/ecma262/#sec-construct">Construct</a></emu-xref>(<var>C</var>, « »).</li>
+					</ol>
+				</li>
+				<li>Let <var>A</var> be
+					<emu-xref aoid="ArrayCreate"><a href="https://tc39.github.io/ecma262/#sec-arraycreate">ArrayCreate</a></emu-xref>(0).</li>
+				<li>Let <var>iter</var> be ?
+					<emu-xref aoid="GetIterator"><a href="https://tc39.github.io/ecma262/#sec-getiterator">GetIterator</a></emu-xref>(<var>source</var>).</li>
+				<li>Let <var>n</var> be 0.</li>
+				<li>Repeat,
+					<ol>
+						<li>Let <var>next</var> be ?
+							<emu-xref aoid="IteratorStep"><a href="https://tc39.github.io/ecma262/#sec-iteratorstep">IteratorStep</a></emu-xref>(<var>iter</var>).</li>
+						<li>If <var>next</var>is
+							<emu-val>false</emu-val>, return ?
+							<emu-xref aoid="Construct"><a href="https://tc39.github.io/ecma262/#sec-construct">Construct</a></emu-xref>(<var>C</var>, « <var>A</var> »).</li>
+						<li>Let <var>nextItem</var> be ?
+							<emu-xref aoid="IteratorValue"><a href="https://tc39.github.io/ecma262/#sec-iteratorvalue">IteratorValue</a></emu-xref>(<var>next</var>).</li>
+						<li>If <var>mapping</var> is
+							<emu-val>true</emu-val>, then
+							<ol>
+								<li>Let <var>value</var> be
+									<emu-xref aoid="Call"><a href="https://tc39.github.io/ecma262/#sec-call">Call</a></emu-xref>(<var>mapfn</var>, <var>thisArg</var>, « <var>nextItem</var>, <var>n</var> »).</li>
+								<li>If <var>value</var> is an
+									<emu-xref href="#sec-completion-record-specification-type"><a href="https://tc39.github.io/ecma262/#sec-completion-record-specification-type">abrupt completion</a></emu-xref>, return ?
+									<emu-xref aoid="IteratorClose"><a href="https://tc39.github.io/ecma262/#sec-iteratorclose">IteratorClose</a></emu-xref>(<var>iter</var>, <var>value</var>).</li>
+							</ol>
+						</li>
+						<li>Else, Let <var>value</var> be <var>nextItem</var>.</li>
+						<li>Let <var>status</var> be ?
+							<emu-xref aoid="CreateDataProperty"><a href="https://tc39.github.io/ecma262/#sec-createdataproperty">CreateDataProperty</a></emu-xref>(<var>A</var>, !
+							<emu-xref aoid="ToString"><a href="https://tc39.github.io/ecma262/#sec-tostring">ToString</a></emu-xref>(<var>n</var>), <var>value</var>).</li>
+						<li>If <var>status</var> is an
+							<emu-xref href="#sec-completion-record-specification-type"><a href="https://tc39.github.io/ecma262/#sec-completion-record-specification-type">abrupt completion</a></emu-xref>, return ?
+							<emu-xref aoid="IteratorClose"><a href="https://tc39.github.io/ecma262/#sec-iteratorclose">IteratorClose</a></emu-xref>(<var>iter</var>, <var>status</var>).</li>
+						<li>Increment <var>n</var> by
+							<emu-val>1</emu-val>.
+						</li>
+					</ol>
 				</li>
 			</ol>
 		</emu-alg>
+
 	</emu-clause>
 
 	<emu-clause id="sec-map.of">
@@ -250,69 +294,90 @@
 		</emu-alg>
 	</emu-clause>
 
-	<emu-clause id="sec-collectioncreatefrom aoid=" collectioncreatefrom "=" ">
-  <h1><span class="secnum ">6</span>CollectionCreateFrom ( <var>C</var>, <var>source</var>, <var>mapfn</var>, <var>thisArg</var> )<span class="utils "><span class="anchor "><a href="#sec-collectioncreatefrom aoid=">#</a></span></span></h1>
 
-  <p>The abstract operation CollectionCreateFrom with arguments <var>C</var>, <var>source</var>, <var>mapfn</var> and <var>thisArg</var>, the following steps are taken:</p>
+	<emu-clause id="sec-map.from">
+		<h1><span class="secnum">6</span>Map.from ( <var>source</var> [ , <var>mapFn</var> [ , <var>thisArg</var> ] ] )<span class="utils"><span class="anchor"><a href="#sec-map.from">#</a></span></span>
+		</h1>
 
-  <emu-alg><ol><li>If <emu-xref aoid=" IsConstructor "><a href="https://tc39.github.io/ecma262/#sec-isconstructor ">IsConstructor</a></emu-xref>(<var>C</var>) is <emu-val>false</emu-val>, throw a <emu-val>TypeError</emu-val> exception.</li><li>If <var>mapfn</var> is not <emu-val>undefined</emu-val>, then<ol><li>If <emu-xref aoid="IsCallable "><a href="https://tc39.github.io/ecma262/#sec-iscallable ">IsCallable</a></emu-xref>(<var>mapfn</var>) is <emu-val>false</emu-val>, throw a <emu-val>TypeError</emu-val> exception.</li><li>Let <var>mapping</var> be <emu-val>true</emu-val>.</li></ol></li><li>Else, let <var>mapping</var> be <emu-val>false</emu-val>.</li><li>If <var>source</var> is either <emu-val>undefined</emu-val> or <emu-val>null</emu-val>,<ol><li>Return ? <emu-xref aoid="Construct "><a href="https://tc39.github.io/ecma262/#sec-construct ">Construct</a></emu-xref>(<var>C</var>, « »).</li></ol></li><li>Let <var>A</var> be <emu-xref aoid="ArrayCreate "><a href="https://tc39.github.io/ecma262/#sec-arraycreate ">ArrayCreate</a></emu-xref>(0).</li><li>Let <var>iter</var> be ? <emu-xref aoid="GetIterator "><a href="https://tc39.github.io/ecma262/#sec-getiterator ">GetIterator</a></emu-xref>(<var>source</var>).</li><li>Let <var>n</var> be 0.</li><li>Repeat,<ol><li>Let <var>next</var> be ? <emu-xref aoid="IteratorStep "><a href="https://tc39.github.io/ecma262/#sec-iteratorstep ">IteratorStep</a></emu-xref>(<var>iter</var>).</li><li>If <var>next</var>is <emu-val>false</emu-val>, return ? <emu-xref aoid="Construct "><a href="https://tc39.github.io/ecma262/#sec-construct ">Construct</a></emu-xref>(<var>C</var>, « <var>A</var> »).</li><li>Let <var>nextItem</var> be ? <emu-xref aoid="IteratorValue "><a href="https://tc39.github.io/ecma262/#sec-iteratorvalue ">IteratorValue</a></emu-xref>(<var>next</var>).</li><li>If <var>mapping</var> is <emu-val>true</emu-val>, then<ol><li>Let <var>value</var> be <emu-xref aoid="Call "><a href="https://tc39.github.io/ecma262/#sec-call ">Call</a></emu-xref>(<var>mapfn</var>, <var>thisArg</var>, « <var>nextItem</var>, <var>n</var> »).</li><li>If <var>value</var> is an <emu-xref href="#sec-completion-record-specification-type "><a href="https://tc39.github.io/ecma262/#sec-completion-record-specification-type ">abrupt completion</a></emu-xref>, return ? <emu-xref aoid="IteratorClose "><a href="https://tc39.github.io/ecma262/#sec-iteratorclose ">IteratorClose</a></emu-xref>(<var>iter</var>, <var>value</var>).</li></ol></li><li>Else, Let <var>value</var> be <var>nextItem</var>.</li><li>Let <var>status</var> be ? <emu-xref aoid="CreateDataProperty "><a href="https://tc39.github.io/ecma262/#sec-createdataproperty ">CreateDataProperty</a></emu-xref>(<var>A</var>, ! <emu-xref aoid="ToString "><a href="https://tc39.github.io/ecma262/#sec-tostring ">ToString</a></emu-xref>(<var>n</var>), <var>value</var>).</li><li>If <var>status</var> is an <emu-xref href="#sec-completion-record-specification-type "><a href="https://tc39.github.io/ecma262/#sec-completion-record-specification-type ">abrupt completion</a></emu-xref>, return ? <emu-xref aoid="IteratorClose "><a href="https://tc39.github.io/ecma262/#sec-iteratorclose ">IteratorClose</a></emu-xref>(<var>iter</var>, <var>status</var>).</li><li>Increment <var>n</var> by <emu-val>1</emu-val>.
-  </li></ol></li></ol></emu-alg>
+		<p>When the <code>from</code> method is called with argument <var>source</var>, and optional arguments <var>mapfn</var> and <var>thisArg</var>, the following steps are taken:</p>
 
-</emu-clause>
+		<emu-alg>
+			<ol>
+				<li>Let <var>C</var> be the <var>this</var> value.</li>
+				<li>Return ?
+					<emu-xref aoid="CollectionCreate"><a href="#sec-collectioncreate">CollectionCreate</a></emu-xref>(<var>C</var>, <var>source</var>, <var>mapFn</var>, <var>thisArg</var>).
+				</li>
+			</ol>
+		</emu-alg>
+	</emu-clause>
 
-<emu-clause id="sec-map.from ">
-  <h1><span class="secnum ">7</span>Map.from ( <var>source</var> [ , <var>mapFn</var> [ , <var>thisArg</var> ] ] )<span class="utils "><span class="anchor "><a href="#sec-map.from ">#</a></span></span></h1>
+	<emu-clause id="sec-set.from">
+		<h1><span class="secnum">7</span>Set.from ( <var>source</var> [ , <var>mapFn</var> [ , <var>thisArg</var> ] ] )<span class="utils"><span class="anchor"><a href="#sec-set.from">#</a></span></span>
+		</h1>
 
-  <p>When the <code>from</code> method is called with argument <var>source</var>, and optional arguments <var>mapfn</var> and <var>thisArg</var>, the following steps are taken:</p>
+		<p>When the <code>from</code> method is called with argument <var>source</var>, and optional arguments <var>mapfn</var> and <var>thisArg</var>, the following steps are taken:</p>
 
-  <emu-alg><ol><li>Let <var>C</var> be the <var>this</var> value.</li><li>Return ? CollectionCreateFrom(<var>C</var>, <var>source</var>, <var>mapFn</var>, <var>thisArg</var>).
-  </li></ol></emu-alg>
-</emu-clause>
+		<emu-alg>
+			<ol>
+				<li>Let <var>C</var> be the <var>this</var> value.</li>
+				<li>Return ?
+					<emu-xref aoid="CollectionCreate"><a href="#sec-collectioncreate">CollectionCreate</a></emu-xref>(<var>C</var>, <var>source</var>, <var>mapFn</var>, <var>thisArg</var>).
+				</li>
+			</ol>
+		</emu-alg>
+	</emu-clause>
 
-<emu-clause id="sec-set.from ">
-  <h1><span class="secnum ">8</span>Set.from ( <var>source</var> [ , <var>mapFn</var> [ , <var>thisArg</var> ] ] )<span class="utils "><span class="anchor "><a href="#sec-set.from ">#</a></span></span></h1>
+	<emu-clause id="sec-weakmap.from">
+		<h1><span class="secnum">8</span>WeakMap.from ( <var>source</var> [ , <var>mapFn</var> [ , <var>thisArg</var> ] ] )<span class="utils"><span class="anchor"><a href="#sec-weakmap.from">#</a></span></span>
+		</h1>
 
-  <p>When the <code>from</code> method is called with argument <var>source</var>, and optional arguments <var>mapfn</var> and <var>thisArg</var>, the following steps are taken:</p>
+		<p>When the <code>from</code> method is called with argument <var>source</var>, and optional arguments <var>mapfn</var> and <var>thisArg</var>, the following steps are taken:</p>
 
-  <emu-alg><ol><li>Let <var>C</var> be the <var>this</var> value.</li><li>Return ? CollectionCreateFrom(<var>C</var>, <var>source</var>, <var>mapFn</var>, <var>thisArg</var>).
-  </li></ol></emu-alg>
-</emu-clause>
+		<emu-alg>
+			<ol>
+				<li>Let <var>C</var> be the <var>this</var> value.</li>
+				<li>Return ?
+					<emu-xref aoid="CollectionCreate"><a href="#sec-collectioncreate">CollectionCreate</a></emu-xref>(<var>C</var>, <var>source</var>, <var>mapFn</var>, <var>thisArg</var>).
+				</li>
+			</ol>
+		</emu-alg>
+	</emu-clause>
 
-<emu-clause id="sec-weakmap.from ">
-  <h1><span class="secnum ">9</span>WeakMap.from ( <var>source</var> [ , <var>mapFn</var> [ , <var>thisArg</var> ] ] )<span class="utils "><span class="anchor "><a href="#sec-weakmap.from ">#</a></span></span></h1>
+	<emu-clause id="sec-weakset.from">
+		<h1><span class="secnum">9</span>WeakSet.from ( <var>source</var> [ , <var>mapFn</var> [ , <var>thisArg</var> ] ] )<span class="utils"><span class="anchor"><a href="#sec-weakset.from">#</a></span></span>
+		</h1>
 
-  <p>When the <code>from</code> method is called with argument <var>source</var>, and optional arguments <var>mapfn</var> and <var>thisArg</var>, the following steps are taken:</p>
+		<p>When the <code>from</code> method is called with argument <var>source</var>, and optional arguments <var>mapfn</var> and <var>thisArg</var>, the following steps are taken:</p>
 
-  <emu-alg><ol><li>Let <var>C</var> be the <var>this</var> value.</li><li>Return ? CollectionCreateFrom(<var>C</var>, <var>source</var>, <var>mapFn</var>, <var>thisArg</var>).
-  </li></ol></emu-alg>
-</emu-clause>
+		<emu-alg>
+			<ol>
+				<li>Let <var>C</var> be the <var>this</var> value.</li>
+				<li>Return ?
+					<emu-xref aoid="CollectionCreate"><a href="#sec-collectioncreate">CollectionCreate</a></emu-xref>(<var>C</var>, <var>source</var>, <var>mapFn</var>, <var>thisArg</var>).
+				</li>
+			</ol>
+		</emu-alg>
+	</emu-clause>
+	<emu-annex id="sec-copyright-and-software-license">
+		<h1><span class="secnum">A</span>Copyright &amp; Software License<span class="utils"><span class="anchor"><a href="#sec-copyright-and-software-license">#</a></span></span>
+		</h1>
 
-<emu-clause id="sec-weakset.from ">
-  <h1><span class="secnum ">10</span>WeakSet.from ( <var>source</var> [ , <var>mapFn</var> [ , <var>thisArg</var> ] ] )<span class="utils "><span class="anchor "><a href="#sec-weakset.from ">#</a></span></span></h1>
+		<h2>Copyright Notice</h2>
+		<p>© 2016 Allen Wirfs-Brock,Leonardo Balter</p>
 
-  <p>When the <code>from</code> method is called with argument <var>source</var>, and optional arguments <var>mapfn</var> and <var>thisArg</var>, the following steps are taken:</p>
+		<h2>Software License</h2>
+		<p>All Software contained in this document ("Software") is protected by copyright and is being made available under the "BSD License", included below. This Software may be subject to third party rights (rights from parties other than Ecma International), including patent rights, and no licenses under such third party rights are granted under this license even if the third party concerned is a member of Ecma International. SEE THE ECMA CODE OF CONDUCT IN PATENT MATTERS AVAILABLE AT http://www.ecma-international.org/memento/codeofconduct.htm FOR INFORMATION REGARDING THE LICENSING OF PATENT CLAIMS THAT ARE REQUIRED TO IMPLEMENT ECMA INTERNATIONAL STANDARDS.</p>
 
-  <emu-alg><ol><li>Let <var>C</var> be the <var>this</var> value.</li><li>Return ? CollectionCreateFrom(<var>C</var>, <var>source</var>, <var>mapFn</var>, <var>thisArg</var>).
-  </li></ol></emu-alg>
-</emu-clause><emu-annex id="sec-copyright-and-software-license ">
-      <h1><span class="secnum ">A</span>Copyright &amp; Software License<span class="utils "><span class="anchor "><a href="#sec-copyright-and-software-license ">#</a></span></span></h1>
-      
-      <h2>Copyright Notice</h2>
-      <p>© 2016 Allen Wirfs-Brock,Leonardo Balter</p>
+		<p>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</p>
 
-      <h2>Software License</h2>
-      <p>All Software contained in this document ("Software ") is protected by copyright and is being made available under the "BSD License ", included below. This Software may be subject to third party rights (rights from parties other than Ecma International), including patent rights, and no licenses under such third party rights are granted under this license even if the third party concerned is a member of Ecma International. SEE THE ECMA CODE OF CONDUCT IN PATENT MATTERS AVAILABLE AT http://www.ecma-international.org/memento/codeofconduct.htm FOR INFORMATION REGARDING THE LICENSING OF PATENT CLAIMS THAT ARE REQUIRED TO IMPLEMENT ECMA INTERNATIONAL STANDARDS.</p>
+		<ol>
+			<li>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</li>
+			<li>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</li>
+			<li>Neither the name of the authors nor Ecma International may be used to endorse or promote products derived from this software without specific prior written permission.</li>
+		</ol>
 
-<p>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</p>
+		<p>THIS SOFTWARE IS PROVIDED BY THE ECMA INTERNATIONAL "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL ECMA INTERNATIONAL BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
 
-<ol>
-  <li>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</li>
-  <li>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</li>
-  <li>Neither the name of the authors nor Ecma International may be used to endorse or promote products derived from this software without specific prior written permission.</li>
-</ol>
-
-<p>THIS SOFTWARE IS PROVIDED BY THE ECMA INTERNATIONAL "AS IS " AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL ECMA INTERNATIONAL BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
-
-    </emu-annex>
+	</emu-annex>
 
 </body>
