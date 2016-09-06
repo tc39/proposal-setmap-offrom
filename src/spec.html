@@ -38,7 +38,7 @@ contributors:
         1. Let _value_ be Call(_mapfn_, _thisArg_, &laquo; _nextItem_, _n_ &raquo;).
         1. If _value_ is an abrupt completion, return ? IteratorClose(_iter_, _value_).
       1. Else, Let _value_ be _nextItem_.
-      1. Let _status_ be ? CreateDataProperty(_A_, ! ToString(_n_), _value_).
+      1. Let _status_ be CreateDataProperty(_A_, ! ToString(_n_), _value_).
       1. If _status_ is an abrupt completion, return ? IteratorClose(_iter_, _status_).
       1. Increment _n_ by *1*.
   </emu-alg>
