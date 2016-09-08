@@ -20,7 +20,7 @@ contributors:
 
   <emu-alg>
     1. If IsConstructor(_C_) is *false*, throw a *TypeError* exception.
-    1. If _mapfn_ is *undefined*, let mapping be false.
+    1. If _mapfn_ is *undefined*, let _mapping_ be false.
     1. Else,
       1. If IsCallable(_mapfn_) is *false*, throw a *TypeError* exception.
       1. Let _mapping_ be *true*.
@@ -31,12 +31,12 @@ contributors:
     1. Let _n_ be 0.
     1. Repeat,
       1. Let _next_ be ? IteratorStep(_iter_).
-      1. If _next_is *false*, return ? Construct(_C_, &laquo; _A_ &raquo;).
+      1. If _next_ is *false*, return ? Construct(_C_, &laquo; _A_ &raquo;).
       1. Let _nextItem_ be ? IteratorValue(_next_).
       1. If _mapping_ is *true*, then
         1. Let _value_ be Call(_mapfn_, _thisArg_, &laquo; _nextItem_, _n_ &raquo;).
         1. If _value_ is an abrupt completion, return ? IteratorClose(_iter_, _value_).
-      1. Else, Let _value_ be _nextItem_.
+      1. Else, let _value_ be _nextItem_.
       1. Let _status_ be CreateDataProperty(_A_, ! ToString(_n_), _value_).
       1. If _status_ is an abrupt completion, return ? IteratorClose(_iter_, _status_).
       1. Increment _n_ by *1*.
