@@ -11,7 +11,7 @@
   "license": "BSD",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leobalter/proposal-setmap-offrom.git"
+    "url": "git+https://github.com/tc39/proposal-setmap-offrom.git"
   },
   "keywords": [
     "ecmascript",

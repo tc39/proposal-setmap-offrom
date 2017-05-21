@@ -23,4 +23,5 @@ https://twitter.com/BrendanEich/status/771009446298329088
 
 ## Questions
 
-https://github.com/leobalter/proposal-setmap-offrom/issues
+https://github.com/tc39/proposal-setmap-offrom/issues
+
