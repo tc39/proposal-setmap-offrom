@@ -7,6 +7,7 @@
 
 ## Champions
 
+- Kevin Gibbons
 - Allen Wirfs-Brock
 - Leo Balter
 
