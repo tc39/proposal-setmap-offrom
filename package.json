@@ -1,5 +1,6 @@
 {
   "name": "proposal-setmap-offrom",
+  "private": true,
   "version": "0.0.0",
   "description": "TC39 Proposal for Set and Map .of and .from methods",
   "main": "index.js",
@@ -19,6 +20,6 @@
     "test262"
   ],
   "devDependencies": {
-    "ecmarkup": "^3.5.1"
+    "ecmarkup": "^3.16.0"
   }
 }
